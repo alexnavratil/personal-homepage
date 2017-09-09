@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alexander Navratil's homepage</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#00bee8">
+    <meta name="description" content="Alexander Navratil, a Software Developer living in Austria" />
+    <meta name="keywords" content="Alexander Navratil, Navratil, alexnavratil, Software Developer, Web Application, Spring, Spring Boot, Angular, REST, API, Model railway" />
+    <meta name="twitter:site" content="@alexnavratil" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="overscroll-container">
+            <div id="column-container">
+                <div id="home" class="card page">
+                    <span id="profile-img">
+                        <img src="img/avatar.jpg"/>
+                    </span>
+                    <h1>Alexander Navratil</h1>
+                    <h2>Software Developer</h2>
+                    <span>
+                        <a class="btn-pill twitter" target="_blank" href="https://twitter.com/alexnavratil">#Twitter</a>
+                        <a class="btn-pill mail" target="_blank" href="mailto:navratil.alex@gmail.com">#Mail</a>
+                        <a class="btn-pill github" target="_blank" href="https://github.com/alexnavratil">#GitHub</a>
+                    </span>
+                </div>
+                <div id="cv" class="card page">
+                    <h1>About me</h1>
+                    <div class="timeline">
+                        <h2>2017</h2>
+
+                        <ul>
+                            <li>
+                                <h3>TU Vienna</h3>
+                                <p>Studying Software and Information Engineering.</p>
+                                <time>October 2017</time>
+                            </li>
+                            <li>
+                                <h3>Community service at Red Cross</h3>
+                                <p>Mostly transporting people to the doctor or the hospital and home.</p>
+                                <time>January 2017 - September 2017</time>
+                            </li>
+                        </ul>
+
+                        <h2>2016</h2>
+
+                        <ul>
+                            <li>
+                                <h3>Working at <span style="color: #d4241b">C</span>atalysts GmbH</h3>
+                                <p>I worked as a Software Developer on some projects with the ESA (European Space Agency). I had to leave in December for the community service</p>
+                                <time>July 2017 - December 2016</time>
+                            </li>
+                        </ul>
+
+                        <h2>School</h2>
+
+                        <ul>
+                            <li>
+                                <h3>Diploma Thesis</h3>
+                                <p>Researching and describing the technology stack of a modern quiz application.</p>
+                                <time>2016</time>
+                            </li>
+                            <li>
+                                <h3>HTL St. Pölten Informatik</h3>
+                                <p></p>
+                                <time>2011-2016</time>
+                            </li>
+                            <li>
+                                <h3>Secondary School</h3>
+                                <p></p>
+                                <time>2007-2011</time>
+                            </li>
+                            <li>
+                                <h3>Elementary school</h3>
+                                <p></p>
+                                <time>2003-2007</time>
+                            </li>
+                        </ul>
+
+                        <h2>1997</h2>
+                        <ul>
+                            <li>
+                                <h3>Birth</h3>
+                                <p>The story begins...</p>
+                                <time>March 1997</time>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="projects" class="card page">
+                    <h1>Projects</h1>
+                    <div id="project-list">
+                        <div class="project">
+                            <h2 class="project-title">Model railway</h2>
+                            The aim of this project is to control my little model railway using a raspberry pi over the GPIO interface. I implemented the logic in several languages and frameworks to get the best performance out of the little pi. Open this project to read more about.
+                            <div class="project-full">
+                                The aim of this project is to control my little model railway using a raspberry pi over the GPIO interface.
+                                I implemented the logic in several languages and frameworks to get the best performance out of the little pi.
+                                The first version was a simple Java GUI application rendering rails using the Graphics2D API and controlling the Pi over WebSockets. Due to performance problems of the Java Desktop application I decided to implement a web application using Spring Boot which I wasn't satisfied either as the startup time of Spring Boot on the raspberry pi was horrible. Now I implemented the whole server logic and the API using Swift (Vapor) which has a good performance.
+                            </div>
+                        </div>
+                        <div class="project">
+                            <h2 class="project-title">YouTube Cloud</h2>
+                            This project should help to get my music library sync across all my devices. It's an Angular frontend and Spring Boot backend web application which downloades YouTube Videos as mp3 and uploads them to a configured WebDAV storage (nextcloud in my case). This WebDAV storage get's then synced on all devices using the nextcloud sync apps or 3rd party WebDAV syncing apps.
+                            <div class="project-full">
+                                This project should help to get my music library sync across all my devices. It's an Angular frontend and Spring Boot backend web application which downloades YouTube Videos as mp3 and uploads them to a configured WebDAV storage (nextcloud in my case). This WebDAV storage get's then synced on all devices using the nextcloud sync apps or 3rd party WebDAV syncing apps.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="imprint" class="card page">
+                    <h1>Imprint</h1>
+                    Alexander Navratil<br/>
+                    Hans-Czettelstraße 7<br/>
+                    3205 Weinburg<br/>
+                    <strong>E-Mail:</strong> navratil.alex@gmail.com<br/>
+                    Resume timeline inspired by: <a target="_blank" href="https://codepen.io/jplhomer/pen/lgfus">https://codepen.io/jplhomer/pen/lgfus</a>
+                </div>
+            </div>
+            <div id="overscroll"></div>
+        </div>
+    </div>
+    <div id="bottom-bar">
+        <div id="button-wrapper">
+            <a class="nav-btn" href="#">
+                <i class="fa fa-home nav-img" aria-hidden="true"></i>
+                Home
+            </a>
+            <a class="nav-btn" href="#cv">
+                <i class="fa fa-user-o nav-img" aria-hidden="true"></i>
+                About
+            </a>
+            <a class="nav-btn" href="#projects">
+                <i class="fa fa-list nav-img" aria-hidden="true"></i>
+                Projects
+            </a>
+            <a class="nav-btn" href="#imprint">
+                <i class="fa fa-paragraph nav-img" aria-hidden="true"></i>
+                Imprint
+            </a>
+        </div>
+    </div>
+    <script src="js/router.js" type="application/javascript"></script>
+    <script src="js/main.js" type="application/javascript"></script>
+</body>
+</html>

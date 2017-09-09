@@ -1,0 +1,376 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #3b3b3b;
+    background: url('../img/background.jpg') center center / cover no-repeat fixed;
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+
+#wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    align-self: stretch;
+    flex-grow: 1;
+    padding: 3.5rem 0;
+    overflow: auto;
+}
+
+#bottom-bar {
+    align-self: flex-end;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 85%;
+}
+
+#button-wrapper {
+    overflow-x: auto;
+    min-width: 15rem;
+    max-width: 27rem;
+    padding: 0 4.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    height: 100%;
+}
+
+.nav-btn {
+    width: 5rem;
+    text-decoration: none;
+    color: #009bc2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-btn .nav-img {
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+}
+
+#column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#overscroll-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#overscroll {
+    height: 2.5em;
+    width: 100%;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    animation: 0.5s ease-out 0s 1 slideUp;
+    border-radius: 16px;
+    min-width: 15rem;
+    max-width: 45rem;
+    padding: 4.5rem;
+    opacity: .85;
+    background-color: #ffffff;
+    box-shadow: 4px 8px 20px rgba(128, 128, 128, 0.5);
+}
+
+#profile-img {
+    margin-bottom: 2rem;
+    position: relative;
+    display: block;
+}
+
+#profile-img:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -4.5rem;
+    width: calc(100% + 9rem);
+    height: 1px;
+    z-index: -1;
+    background: #c8cccf;
+}
+
+#profile-img img {
+    border-radius: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 0 1.5em #ffffff;
+}
+
+h1 {
+    letter-spacing: 0.22rem;
+    font-weight: lighter;
+}
+
+h2 {
+    letter-spacing: 0.22rem;
+    font-weight: lighter;
+}
+
+.btn-pill {
+    background-color: #2680ff;
+    color: #f3f3f3;
+    border-radius: 8px;
+    padding: .3em;
+    margin: .5em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.twitter {
+    background-color: #00aced;
+}
+
+.mail {
+    background-color: #ced6d2;
+    color: black;
+}
+
+.github {
+    background-color: #6f7170;
+}
+
+.page {
+    display: none
+}
+
+.active {
+    display: block !important;
+}
+
+.project {
+    transition: background-color .5s ease;
+    padding: 2rem;
+    border-bottom: 1px solid #cccccc;
+    cursor: pointer;
+}
+
+.project:hover {
+    background-color: rgba(158, 158, 158, 0.6);
+}
+
+.project-full {
+    display: none;
+}
+
+.modal {
+    opacity: 0;
+    transition: all .5s;
+    position: fixed;
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    background-color: white;
+    margin-top: 50px;
+}
+
+.modal.modal-active {
+    display: block;
+    opacity: 1;
+    margin-top: 0;
+}
+
+.modal-close {
+    font-size: 2rem !important;
+}
+
+.modal-close:hover {
+    color: lightgray;
+}
+
+.modal-topbar {
+    background-color: #ededed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+}
+
+.modal-content {
+    padding: 0 4rem;
+    height: calc(100% - 6rem);
+    margin-top: 6rem;
+    font-size: 14pt;
+    overflow-y: auto;
+    line-height: 2rem;
+    font-weight: lighter;
+}
+
+.modal-title {
+    margin: 0;
+    width: calc(90% - 2rem);
+    float: left;
+}
+
+@media only screen and (max-device-width: 30em) {
+    .card {
+        padding: 2rem 4rem;
+        width: calc(100% - 8rem);
+        overflow: auto;
+        height: calc(100% - 4rem);
+        border-radius: 0;
+    }
+
+    #wrapper {
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+
+    #column-container {
+        display: block;
+        height: 100%;
+    }
+
+    #overscroll-container {
+        display: block;
+        height: calc(100vh - 4rem);
+    }
+
+    #overscroll {
+        display: none;
+    }
+
+    #profile-img:before {
+        left: -4rem;
+        width: calc(100% + 8rem);
+    }
+
+    #button-wrapper {
+        padding: 0;
+    }
+
+    .modal-content {
+        padding: 0 1rem;
+    }
+}
+
+#home {
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    overflow: auto;
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background: #dddddd;
+    left: 0;
+}
+.timeline h2 {
+    white-space: nowrap;
+    background: #dddddd;
+    max-width: 6em;
+    margin: 0 auto 1em;
+    padding: 0.5em;
+    text-align: center;
+    position: relative;
+    clear: both;
+}
+.timeline ul {
+    list-style: none;
+    padding: 0 0 0 1em;
+    z-index: 1;
+}
+.timeline li {
+    background: #dddddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    position: relative;
+}
+.timeline li:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 1em solid #dddddd;
+    border-left: 1em solid transparent;
+    position: absolute;
+    left: -1em;
+    top: 0;
+}
+.timeline h3 {
+    margin-top: 0;
+}
+.timeline time {
+    font-style: italic;
+}
+
+@media screen and (min-width: 40em) {
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .timeline:before {
+        left: 50%;
+    }
+    .timeline ul {
+        padding-left: 0;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .timeline li {
+        width: 42%;
+    }
+    .timeline li:nth-child(even) {
+        float: right;
+        margin-top: 2em;
+    }
+    .timeline li:nth-child(odd) {
+        float: left;
+    }
+    .timeline li:nth-child(odd):before {
+        border-top: 1em solid #dddddd;
+        border-right: 1em solid transparent;
+        right: -1em;
+        left: auto;
+    }
+    .timeline li:nth-of-type(2n+1) {
+        clear: both;
+    }
+}
+
